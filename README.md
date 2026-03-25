@@ -1,70 +1,158 @@
-# Getting Started with Create React App
+# Emily Rodriguez Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portafolio profesional desarrollado con React para presentar perfil técnico, stack de habilidades, experiencia académica/laboral y proyectos destacados con una interfaz moderna, responsiva y enfocada en experiencia de usuario.
 
-## Available Scripts
+## Resumen
 
-In the project directory, you can run:
+Este proyecto corresponde al Task 2 de Apexcify Technologies y fue evolucionado desde una base Create React App hacia una experiencia visual más sólida con:
 
-### `npm start`
+- Navegación fija con menú responsive (desktop + drawer móvil).
+- Hero principal con llamada a la acción para descargar CV.
+- Sección About con fondo interactivo usando Vanta + Three.js.
+- Skills agrupadas por categorías con iconografía Devicon.
+- Educación y experiencia en layout optimizado para móvil.
+- Proyectos con tarjetas, modal de detalles y enlaces externos.
+- Footer de contacto con accesibilidad y redes sociales.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Stack tecnológico
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 19
+- JavaScript (ES6+)
+- CSS modular por secciones
+- React Icons
+- Devicon
+- Vanta.js + Three.js
+- React Scripts (Create React App)
 
-### `npm test`
+## Estructura del proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```text
+src/
+	App.js
+	pages/
+		Header.jsx
+		Hero.jsx
+		About.jsx
+		SkillsCards.jsx
+		EducationExperience.jsx
+		ProjectSection.jsx
+		Footer.jsx
+		Sidebar.jsx
+	assets/
+		css/
+			Header.css
+			Hero.css
+			About.css
+			SkillsCards.css
+			EducationExperience.css
+			ProjectsSection.css
+			Footer.css
+public/
+	index.html
+	manifest.json
+	...
+```
 
-### `npm run build`
+## Funcionalidades principales
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Header y navegación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Scroll suave hacia secciones internas.
+- Sección activa detectada automáticamente con IntersectionObserver.
+- Menú móvil con overlay, foco controlado y cierre por Escape.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Hero
 
-### `npm run eject`
+- Presentación profesional con tipografía y efectos glow.
+- Botón para descarga de CV.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para que la descarga funcione, el archivo debe existir en:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- public/cv-emily-rodriguez.pdf
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### About
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Fondo dinámico de red (Vanta NET) con cleanup del efecto al desmontar componente.
 
-## Learn More
+### Skills
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Categorías separadas: Frontend, Backend, Databases y Tools.
+- Íconos visuales para lectura rápida del stack.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Educación y experiencia
 
-### Code Splitting
+- Carrusel en Education con controles, contador y dots.
+- Lista de Experience con tarjetas optimizadas para múltiples resoluciones.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Proyectos
 
-### Analyzing the Bundle Size
+- Grid responsive de tarjetas.
+- Modal de detalle por proyecto con cierre por click externo y tecla Escape.
+- Enlaces a GitHub cuando están disponibles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Footer
 
-### Making a Progressive Web App
+- Contacto clicable (tel/mail).
+- Redes sociales con etiquetas accesibles.
+- Diseño responsive y consistencia visual con el resto del sitio.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Instalación y ejecución
 
-### Advanced Configuration
+### 1) Clonar repositorio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+git clone https://github.com/EmilySelenia01/apexcifytechnologys_task_2.git
+cd apexcifytechnologys_task_2
+```
 
-### Deployment
+### 2) Instalar dependencias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm install
+```
 
-### `npm run build` fails to minify
+### 3) Ejecutar en desarrollo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
+```
+
+Aplicación disponible en:
+
+- http://localhost:3000
+
+### 4) Build de producción
+
+```bash
+npm run build
+```
+
+## Scripts disponibles
+
+- npm start: inicia entorno de desarrollo.
+- npm run build: genera build optimizado.
+- npm test: ejecuta tests en modo interactivo.
+- npm run eject: expone configuración interna de CRA (irreversible).
+
+## Mejoras recientes incorporadas
+
+- Refinamiento visual del header (desktop y móvil).
+- Correcciones de responsive en Education/Experience y Projects para evitar overflow.
+- Footer mejorado con estructura más profesional y mejor accesibilidad.
+- Branding personalizado en título del navegador y manifest.
+- Integración del botón de descarga de CV en Hero.
+
+## Próximas mejoras sugeridas
+
+- Agregar vista previa del CV además de descarga.
+- Incorporar lazy loading en assets pesados.
+- Añadir pruebas de integración para navegación y modal de proyectos.
+- Publicar demo en Vercel/Netlify con URL pública en este README.
+
+## Autoría
+
+Emily Selenia Rodriguez Mendoza
+
+- GitHub: https://github.com/EmilySelenia01
+- LinkedIn: https://linkedin.com/in/emily-rodríguez-/
+- WhatsApp: https://wa.me/50686315227
