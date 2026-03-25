@@ -1,0 +1,166 @@
+.aboutme-bg {
+  min-height: clamp(520px, 66vh, 680px);
+  padding: 28px 0 72px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(160deg, #10091f 0%, #120925 46%, #0b0718 100%);
+}
+
+#about {
+  scroll-margin-top: 0;
+}
+
+.aboutme-vanta {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.aboutme-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(44% 58% at 14% 32%, rgba(168, 85, 247, 0.18) 0%, rgba(168, 85, 247, 0) 72%),
+    radial-gradient(38% 52% at 86% 24%, rgba(99, 102, 241, 0.16) 0%, rgba(99, 102, 241, 0) 74%),
+    linear-gradient(180deg, rgba(15, 10, 28, 0.46) 0%, rgba(9, 7, 20, 0.74) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.aboutme-bg::after {
+  content: "";
+  position: absolute;
+  width: clamp(260px, 34vw, 520px);
+  height: clamp(260px, 34vw, 520px);
+  right: -8%;
+  top: 30%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.28) 0%, rgba(192, 132, 252, 0) 68%);
+  filter: blur(8px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.aboutme-title-pro {
+  font-size: clamp(2.2rem, 4.2vw, 3.25rem);
+  font-weight: 900;
+  color: #f8f5ff;
+  margin: 22px 0 28px 0;
+  text-align: center;
+  letter-spacing: 1.5px;
+  z-index: 2;
+  position: relative;
+  text-shadow: 0 0 14px #c084fc80, 0 0 30px #7c3aed52;
+}
+
+.aboutme-title-pro span {
+  color: #c084fc;
+  letter-spacing: 2px;
+  margin-left: 6px;
+}
+
+.aboutme-card-glass {
+  position: relative;
+  width: min(94vw, 920px);
+  margin: 0 auto;
+  padding: clamp(22px, 3.1vw, 48px) clamp(22px, 3.6vw, 60px);
+  border-radius: 28px;
+  background:
+    radial-gradient(120% 130% at 12% 10%, rgba(192, 132, 252, 0.15) 0%, rgba(192, 132, 252, 0) 52%),
+    linear-gradient(165deg, rgba(26, 19, 48, 0.95) 0%, rgba(13, 11, 30, 0.93) 100%);
+  box-shadow: 0 16px 48px rgba(7, 6, 18, 0.55), 0 0 30px rgba(124, 58, 237, 0.18);
+  border: 1.5px solid rgba(192, 132, 252, 0.48);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.aboutme-card-glass:hover {
+  border-color: rgba(216, 180, 254, 0.74);
+  box-shadow: 0 18px 54px rgba(7, 6, 18, 0.6), 0 0 34px rgba(124, 58, 237, 0.28);
+  transform: translateY(-2px);
+}
+
+.card-hex-bg {
+  display: none !important;
+}
+
+.aboutme-card-glass > * {
+  position: relative;
+  z-index: 2;
+}
+
+.aboutme-hi {
+  color: #d8b4fe;
+  text-shadow: 0 0 14px #a855f75a;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 1.6px;
+}
+
+.aboutme-card-glass p,
+.aboutme-card-glass .aboutme-skill {
+  color: #ece6ff !important;
+  text-shadow: 0 1px 8px rgba(8, 7, 18, 0.5);
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  font-family: "Fira Mono", monospace;
+  line-height: 1.66;
+  margin-bottom: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.aboutme-skill {
+  color: #c084fc !important;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .aboutme-card-glass {
+    width: min(96vw, 820px);
+    margin: 12px auto;
+    border-radius: 20px;
+  }
+
+  .aboutme-card-glass p,
+  .aboutme-card-glass .aboutme-skill {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutme-bg {
+    min-height: auto;
+    padding: 18px 0 56px;
+  }
+
+  .aboutme-title-pro {
+    font-size: 1.5rem;
+    margin: 18px 0 16px;
+  }
+
+  .aboutme-card-glass {
+    width: 94vw;
+    border-radius: 14px;
+    padding: 16px 16px;
+  }
+}
+
+body,
+html,
+.aboutme-bg {
+  overflow-x: hidden;
+}
