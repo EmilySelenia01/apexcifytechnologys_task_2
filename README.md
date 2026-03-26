@@ -1,30 +1,43 @@
 # Emily Rodriguez Portfolio
 
-Portafolio profesional desarrollado con React para presentar perfil técnico, stack de habilidades, experiencia académica/laboral y proyectos destacados con una interfaz moderna, responsiva y enfocada en experiencia de usuario.
+[![React](https://img.shields.io/badge/React-19-20232A?logo=react)](https://react.dev/)
+[![Responsive](https://img.shields.io/badge/Responsive-Yes-0ea5e9)](#main-features)
+[![Build](https://img.shields.io/badge/Build-Passing-22c55e)](#installation-and-run)
+[![License](https://img.shields.io/badge/License-Not%20specified-lightgrey)](#license)
 
-## Resumen
+Professional portfolio built with React to showcase technical profile, skill stack, academic/professional background, and featured projects through a modern, responsive, user-focused interface.
 
-Este proyecto corresponde al Task 2 de Apexcify Technologies y fue evolucionado desde una base Create React App hacia una experiencia visual más sólida con:
+## Quick Highlights
 
-- Navegación fija con menú responsive (desktop + drawer móvil).
-- Hero principal con llamada a la acción para descargar CV.
-- Sección About con fondo interactivo usando Vanta + Three.js.
-- Skills agrupadas por categorías con iconografía Devicon.
-- Educación y experiencia en layout optimizado para móvil.
-- Proyectos con tarjetas, modal de detalles y enlaces externos.
-- Footer de contacto con accesibilidad y redes sociales.
+- Modern UI with responsive behavior across desktop, tablet, and mobile.
+- Project gallery with modal details and external repository links.
+- Interactive About section powered by Vanta NET + Three.js.
+- CV download CTA integrated in the Hero section.
+- Accessibility-focused improvements in header, navigation, and footer.
 
-## Stack tecnológico
+## Overview
+
+This project corresponds to Task 2 from Apexcify Technologies and was evolved from a Create React App baseline into a more polished visual experience with:
+
+- Fixed navigation with responsive menu (desktop + mobile drawer).
+- Main hero section with a CV download call-to-action.
+- About section with interactive background using Vanta + Three.js.
+- Skills grouped by categories with Devicon iconography.
+- Education and experience in a mobile-optimized layout.
+- Projects with cards, detail modal, and external links.
+- Contact footer with accessibility improvements and social links.
+
+## Tech Stack
 
 - React 19
 - JavaScript (ES6+)
-- CSS modular por secciones
+- Modular CSS by section
 - React Icons
 - Devicon
 - Vanta.js + Three.js
 - React Scripts (Create React App)
 
-## Estructura del proyecto
+## Project Structure
 
 ```text
 src/
@@ -53,106 +66,110 @@ public/
 	...
 ```
 
-## Funcionalidades principales
+## Main Features
 
-### Header y navegación
+### Header and Navigation
 
-- Scroll suave hacia secciones internas.
-- Sección activa detectada automáticamente con IntersectionObserver.
-- Menú móvil con overlay, foco controlado y cierre por Escape.
+- Smooth scroll to internal sections.
+- Active section detection using IntersectionObserver.
+- Mobile menu with overlay, focus handling, and Escape-to-close.
 
 ### Hero
 
-- Presentación profesional con tipografía y efectos glow.
-- Botón para descarga de CV.
+- Professional presentation with glow typography effects.
+- CV download button.
 
-Para que la descarga funcione, el archivo debe existir en:
+For the download to work, the file must exist at:
 
 - public/cv-emily-rodriguez.pdf
 
 ### About
 
-- Fondo dinámico de red (Vanta NET) con cleanup del efecto al desmontar componente.
+- Dynamic network background (Vanta NET) with proper cleanup on unmount.
 
 ### Skills
 
-- Categorías separadas: Frontend, Backend, Databases y Tools.
-- Íconos visuales para lectura rápida del stack.
+- Grouped categories: Frontend, Backend, Databases, and Tools.
+- Visual icons for fast stack scanning.
 
-### Educación y experiencia
+### Education and Experience
 
-- Carrusel en Education con controles, contador y dots.
-- Lista de Experience con tarjetas optimizadas para múltiples resoluciones.
+- Education carousel with controls, counter, and dots.
+- Experience list with cards optimized for multiple screen sizes.
 
-### Proyectos
+### Projects
 
-- Grid responsive de tarjetas.
-- Modal de detalle por proyecto con cierre por click externo y tecla Escape.
-- Enlaces a GitHub cuando están disponibles.
+- Responsive card grid.
+- Project detail modal with outside-click close and Escape key support.
+- GitHub links when available.
 
 ### Footer
 
-- Contacto clicable (tel/mail).
-- Redes sociales con etiquetas accesibles.
-- Diseño responsive y consistencia visual con el resto del sitio.
+- Clickable contact actions (tel/mail).
+- Social links with accessible labels.
+- Responsive layout and visual consistency with the full site.
 
-## Instalación y ejecución
+## Installation and Run
 
-### 1) Clonar repositorio
+### 1) Clone repository
 
 ```bash
 git clone https://github.com/EmilySelenia01/apexcifytechnologys_task_2.git
 cd apexcifytechnologys_task_2
 ```
 
-### 2) Instalar dependencias
+### 2) Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3) Ejecutar en desarrollo
+### 3) Run in development
 
 ```bash
 npm start
 ```
 
-Aplicación disponible en:
+Application available at:
 
 - http://localhost:3000
 
-### 4) Build de producción
+### 4) Production build
 
 ```bash
 npm run build
 ```
 
-## Scripts disponibles
+## Available Scripts
 
-- npm start: inicia entorno de desarrollo.
-- npm run build: genera build optimizado.
-- npm test: ejecuta tests en modo interactivo.
-- npm run eject: expone configuración interna de CRA (irreversible).
+- npm start: starts the development server.
+- npm run build: creates an optimized production build.
+- npm test: runs tests in watch mode.
+- npm run eject: exposes CRA internal configuration (irreversible).
 
-## Mejoras recientes incorporadas
+## Recently Implemented Improvements
 
-- Refinamiento visual del header (desktop y móvil).
-- Correcciones de responsive en Education/Experience y Projects para evitar overflow.
-- Footer mejorado con estructura más profesional y mejor accesibilidad.
-- Branding personalizado en título del navegador y manifest.
-- Integración del botón de descarga de CV en Hero.
+- Header visual refinements (desktop and mobile).
+- Responsive fixes in Education/Experience and Projects to prevent overflow.
+- Footer improvements with a more professional structure and better accessibility.
+- Personalized branding in browser title and manifest.
+- CV download button integration in Hero.
 
-## Próximas mejoras sugeridas
+## Suggested Next Improvements
 
-- Agregar vista previa del CV además de descarga.
-- Incorporar lazy loading en assets pesados.
-- Añadir pruebas de integración para navegación y modal de proyectos.
-- Publicar demo en Vercel/Netlify con URL pública en este README.
+- Add CV preview along with download.
+- Introduce lazy loading for heavier assets.
+- Add integration tests for navigation and project modal behavior.
+- Publish live demo on Vercel/Netlify and include the URL in this README.
 
-## Autoría
+## Author
 
 Emily Selenia Rodriguez Mendoza
 
 - GitHub: https://github.com/EmilySelenia01
 - LinkedIn: https://linkedin.com/in/emily-rodríguez-/
 - WhatsApp: https://wa.me/50686315227
+
+## License
+
+No license file is currently defined for this repository.
